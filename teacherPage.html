@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,16 +10,13 @@
       cursor: pointer;
       transition: color 0.3s;
     }
-
     .star:hover,
     .star.hovered,
     .star.selected {
-      color: #fbbf24;
-      /* Match star color next to photo (Tailwind yellow-400) */
+      color: #fbbf24; /* Match star color next to photo (Tailwind yellow-400) */
     }
   </style>
 </head>
-
 <body class="bg-gray-50 text-gray-800 font-sans">
   <div class="flex">
     <!-- Sidebar -->
@@ -54,7 +50,7 @@
 
       <!-- Teacher Profile -->
       <div class="flex space-x-6">
-        <img src="carianini.jpg" alt="Teacher" class="w-40 h-52 object-cover rounded">
+        <img src="https://via.placeholder.com/150" alt="Teacher" class="w-40 h-52 object-cover rounded">
         <div>
           <h3 class="text-xl font-semibold">Ms. Caraiani</h3>
           <p class="text-gray-600">Math Department</p>
@@ -73,8 +69,7 @@
             <span class="star">★</span>
             <span class="star">★</span>
           </div>
-          <textarea class="w-80 h-24 p-2 border border-gray-300 rounded"
-            placeholder="Write your own review!"></textarea>
+          <textarea class="w-80 h-24 p-2 border border-gray-300 rounded" placeholder="Write your own review!"></textarea>
         </div>
       </div>
 
@@ -83,28 +78,40 @@
         <div class="bg-white shadow p-4 rounded">
           <div class="text-yellow-400 text-xl">★★★★★</div>
           <h5 class="font-bold mt-2">Gud teach</h5>
-          <p class="text-sm mt-1">I've had Ms. Caraiani three times. She has always been extremely kind and
-            understanding. When I want to spend more time thinking about something, she lets me come during lunch for
-            extra help.</p>
-          <div class="mt-2 text-sm text-gray-500">Joshua Morton<br><span>October 16, 2023</span></div>
+          <p class="text-sm mt-1">I've had Ms. Caraiani three times. She has always been extremely kind and understanding. When I want to spend more time thinking about something, she lets me come during lunch for extra help.</p>
+          <div class="mt-4 flex items-center space-x-2">
+            <img src="https://via.placeholder.com/32" class="rounded-full w-8 h-8" alt="Joshua Morton">
+            <div class="text-sm text-gray-500">
+              Joshua Morton<br>
+              <span>October 16, 2023</span>
+            </div>
+          </div>
         </div>
 
         <div class="bg-white shadow p-4 rounded">
           <div class="text-yellow-400 text-xl">★★★★★</div>
           <h5 class="font-bold mt-2">Pretty Good Teacher</h5>
-          <p class="text-sm mt-1">Ms. Caraiani taught me calculus and vectors, she is a good teacher. She offers extra
-            help and is quite generous when it comes to marking. She cares about her students and successfully teaches
-            materials in class, no complaints here.</p>
-          <div class="mt-2 text-sm text-gray-500">Melissa Morrison<br><span>April 7, 2025</span></div>
+          <p class="text-sm mt-1">Ms. Caraiani taught me calculus and vectors, she is a good teacher. She offers extra help and is quite generous when it comes to marking. She cares about her students and successfully teaches materials in class, no complaints here.</p>
+          <div class="mt-4 flex items-center space-x-2">
+            <img src="https://via.placeholder.com/32" class="rounded-full w-8 h-8" alt="Melissa Morrison">
+            <div class="text-sm text-gray-500">
+              Melissa Morrison<br>
+              <span>April 7, 2025</span>
+            </div>
+          </div>
         </div>
 
         <div class="bg-white shadow p-4 rounded">
           <div class="text-yellow-400 text-xl">★★★★★</div>
           <h5 class="font-bold mt-2">BEST TEACHER EVER</h5>
-          <p class="text-sm mt-1">I am madly in love with Ms. Caraiani, I yearned to attend class just so I could see
-            her. I go crazy every time she solves an equation, I think she could solve my life if she had the chance. I
-            might take grade 13, and take every class she teaches to maximize my time with her.</p>
-          <div class="mt-2 text-sm text-gray-500">Aisha Nishikawa<br><span>March 23, 2024</span></div>
+          <p class="text-sm mt-1">I am madly in love with Ms. Caraiani, I yearned to attend class just so I could see her. I go crazy every time she solves an equation, I think she could solve my life if she had the chance. I might take grade 13, and take every class she teaches to maximize my time with her.</p>
+          <div class="mt-4 flex items-center space-x-2">
+            <img src="https://via.placeholder.com/32" class="rounded-full w-8 h-8" alt="Aisha Nishikawa">
+            <div class="text-sm text-gray-500">
+              Aisha Nishikawa<br>
+              <span>March 23, 2024</span>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -130,5 +137,4 @@
     });
   </script>
 </body>
-
 </html>
