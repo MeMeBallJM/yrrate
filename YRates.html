@@ -52,7 +52,7 @@
           <button class="px-3 py-1 border rounded-full bg-gray-100">Teachers</button>
           <button class="px-3 py-1 border rounded-full bg-gray-100">School</button>
         </div>
-        <button class="bg-black text-white px-4 py-2 rounded">Submit a rating</button>
+        <button id="submit" class="bg-black text-white px-4 py-2 rounded">Submit a rating</button>
       </div>
 
       <!-- Top Teachers -->
@@ -62,7 +62,7 @@
         <div class="grid grid-cols-4 gap-6">
           <!-- Repeat this card for each teacher -->
           <div class="bg-white rounded-xl border-2 border-yellow-300 p-4 text-center">
-            <img src="/carianini.jpg" class="rounded mb-2" />
+            <img id="carianini" src="/carianini.jpg" class="rounded mb-2" />
             <div class="text-yellow-500 text-sm">★ 4.8</div>
             <h3 class="font-semibold">Ms. Caraiani</h3>
             <p class="text-sm text-gray-500">Math Department</p>
@@ -127,6 +127,22 @@
       </section>
     </main>
   </div>
+
+  <script>
+    element = document.getElementById("carianini");
+
+    console.log(element);
+
+    element.addEventListener("click", myfunc);
+
+    function myfunc() {
+      window.location.href = "http://127.0.0.1:5500/teacherPage.html";
+    }
+
+  </script>
+
+
+
 </body>
 
 </html>
