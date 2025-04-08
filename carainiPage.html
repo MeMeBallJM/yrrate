@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,34 +10,31 @@
       cursor: pointer;
       transition: color 0.3s;
     }
-
     .star:hover,
     .star.hovered,
     .star.selected {
-      color: #fbbf24;
-      /* Match star color next to photo (Tailwind yellow-400) */
+      color: #fbbf24; /* Match star color next to photo (Tailwind yellow-400) */
     }
   </style>
 </head>
-
 <body class="bg-gray-50 text-gray-800 font-sans">
   <div class="flex">
     <!-- Sidebar -->
     <aside class="w-64 bg-white shadow h-screen p-6">
-      <h1 class="text-xl font-semibold text-gray-400 mb-6">YRates</h1>
+      <h1 class="text-xl font-semibold mb-6">YRates</h1>
       <div>
         <p class="text-gray-600 text-sm uppercase mb-2">Discover</p>
         <ul>
-          <li class="mb-2 flex items-center space-x-2 text-gray-700"><span>🏠</span><a href="#">Home</a></li>
+          <li class="mb-2 flex items-center space-x-2 text-gray-700"><span>⌂</span><a href="#">Home</a></li>
           <li class="flex items-center space-x-2 text-gray-700"><span>🔍</span><a href="#">Browse</a></li>
         </ul>
       </div>
       <div class="mt-6">
         <p class="text-gray-600 text-sm uppercase mb-2">Library</p>
         <ul>
-          <li class="mb-2 text-gray-700"><span>📃</span> Teachers</li>
-          <li class="mb-2 text-gray-700"> <span>📚</span> Subjects</li>
-          <li class="text-gray-700"> <span>🙂</span> Personalized picks</li>
+          <li class="mb-2 text-blue-600 font-semibold">Teachers</li>
+          <li class="mb-2 text-gray-700">Subjects</li>
+          <li class="text-gray-700">Personalized picks</li>
         </ul>
       </div>
     </aside>
@@ -49,7 +45,7 @@
         <div>
           <h2 class="text-2xl font-semibold">Sir William Mulock Secondary School</h2>
         </div>
-        <button id="submit" class="bg-black text-white px-4 py-2 rounded">Submit a rating</button>
+        <button class="bg-black text-white px-4 py-2 rounded">Submit a rating</button>
       </div>
 
       <!-- Teacher Profile -->
@@ -73,19 +69,22 @@
             <span class="star">★</span>
             <span class="star">★</span>
           </div>
-          <textarea id="review_block" class="w-80 h-24 p-2 border border-gray-300 rounded"
-            placeholder="Write your own review!"></textarea>
+          <textarea class="w-80 h-24 p-2 border border-gray-300 rounded" placeholder="Write your own review!"></textarea>
         </div>
       </div>
 
       <!-- Reviews -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
         <div class="bg-white shadow p-4 rounded">
-          <div class="text-yellow-400 text-xl">★★★★★</div>
+            <div class="flex items-center space-x-1 text-lg">
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-gray-300">★</span>
+                <span class="text-gray-300">★</span>
+              </div>
           <h5 class="font-bold mt-2">Gud teach</h5>
-          <p class="text-sm mt-1">I've had Ms. Caraiani three times. She has always been extremely kind and
-            understanding. When I want to spend more time thinking about something, she lets me come during lunch for
-            extra help.</p>
+          <p class="text-sm mt-1">I've had Ms. Caraiani three times. She has always been extremely kind and understanding. When I want to spend more time thinking about something, she lets me come during lunch for extra help.</p>
           <div class="mt-4 flex items-center space-x-2">
             <img src="Joshua.jpg" class="rounded-full w-8 h-8" alt="Joshua Morton">
             <div class="text-sm text-gray-500">
@@ -96,11 +95,15 @@
         </div>
 
         <div class="bg-white shadow p-4 rounded">
-          <div class="text-yellow-400 text-xl">★★★★★</div>
+            <div class="flex items-center space-x-1 text-lg">
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-300">★</span>
+                <span class="text-yellow-300">★</span>
+              </div>
           <h5 class="font-bold mt-2">Pretty Good Teacher</h5>
-          <p class="text-sm mt-1">Ms. Caraiani taught me calculus and vectors, she is a good teacher. She offers extra
-            help and is quite generous when it comes to marking. She cares about her students and successfully teaches
-            materials in class, no complaints here.</p>
+          <p class="text-sm mt-1">Ms. Caraiani taught me calculus and vectors, she is a good teacher. She offers extra help and is quite generous when it comes to marking. She cares about her students and successfully teaches materials in class, no complaints here.</p>
           <div class="mt-4 flex items-center space-x-2">
             <img src="mel.jpg" class="rounded-full w-8 h-8" alt="Melissa Morrison">
             <div class="text-sm text-gray-500">
@@ -111,11 +114,15 @@
         </div>
 
         <div class="bg-white shadow p-4 rounded">
-          <div class="text-yellow-400 text-xl">★★★★★</div>
+            <div class="flex items-center space-x-1 text-lg">
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-400">★</span>
+                <span class="text-yellow-300">★</span>
+                <span class="text-yellow-300">★</span>
+              </div>
           <h5 class="font-bold mt-2">BEST TEACHER EVER</h5>
-          <p class="text-sm mt-1">I am madly in love with Ms. Caraiani, I yearned to attend class just so I could see
-            her. I go crazy every time she solves an equation, I think she could solve my life if she had the chance. I
-            might take grade 13, and take every class she teaches to maximize my time with her.</p>
+          <p class="text-sm mt-1">I am madly in love with Ms. Caraiani, I yearned to attend class just so I could see her. I go crazy every time she solves an equation, I think she could solve my life if she had the chance. I might take grade 13, and take every class she teaches to maximize my time with her.</p>
           <div class="mt-4 flex items-center space-x-2">
             <img src="Aisha.jpg" class="rounded-full w-8 h-8" alt="Aisha Nishikawa">
             <div class="text-sm text-gray-500">
@@ -146,26 +153,6 @@
         stars.forEach((s, j) => s.classList.toggle('selected', j <= i));
       });
     });
-
-    text_block = document.getElementById("review_block");
-    submit = document.getElementById("submit");
-
-    console.log(text_block);
-    console.log(submit);
-
-    submit.addEventListener("click", clear);
-
-    function clear() {
-      console.log("EEE")
-      text_block.innerHTML = "";
-    }
-
-
-
-
-
-
   </script>
 </body>
-
 </html>
