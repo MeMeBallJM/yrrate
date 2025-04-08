@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +11,16 @@
       cursor: pointer;
       transition: color 0.3s;
     }
+
     .star:hover,
     .star.hovered,
     .star.selected {
-      color: #fbbf24; /* Match star color next to photo (Tailwind yellow-400) */
+      color: #fbbf24;
+      /* Match star color next to photo (Tailwind yellow-400) */
     }
   </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800 font-sans">
   <div class="flex">
     <!-- Sidebar -->
@@ -45,7 +49,7 @@
         <div>
           <h2 class="text-2xl font-semibold">Sir William Mulock Secondary School</h2>
         </div>
-        <button class="bg-black text-white px-4 py-2 rounded">Submit a rating</button>
+        <button id="submit" class="bg-black text-white px-4 py-2 rounded">Submit a rating</button>
       </div>
 
       <!-- Teacher Profile -->
@@ -69,22 +73,25 @@
             <span class="star">★</span>
             <span class="star">★</span>
           </div>
-          <textarea class="w-80 h-24 p-2 border border-gray-300 rounded" placeholder="Write your own review!"></textarea>
+          <textarea id="review_block" class="w-80 h-24 p-2 border border-gray-300 rounded"
+            placeholder="Write your own review!"></textarea>
         </div>
       </div>
 
       <!-- Reviews -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+      <div id="reviews" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
         <div class="bg-white shadow p-4 rounded">
-            <div class="flex items-center space-x-1 text-lg">
-                <span class="text-yellow-400">★</span>
-                <span class="text-yellow-400">★</span>
-                <span class="text-yellow-400">★</span>
-                <span class="text-yellow-400">★</span>
-                <span class="text-yellow-400">★</span>
-              </div>
+          <div class="flex items-center space-x-1 text-lg">
+            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">★</span>
+          </div>
           <h5 class="font-bold mt-2">Very Cool Guy</h5>
-          <p class="text-sm mt-1">Mr. Rozenberg taught me computer science for three years, hes always been a nice teacher and a generous marker. I've never had a problem with him or his class but I would reccomend you only take this course if you actually enjoy coding.</p>
+          <p class="text-sm mt-1">Mr. Rozenberg taught me computer science for three years, hes always been a nice
+            teacher and a generous marker. I've never had a problem with him or his class but I would reccomend you only
+            take this course if you actually enjoy coding.</p>
           <div class="mt-4 flex items-center space-x-2">
             <img src="mel.jpg" class="rounded-full w-8 h-8" alt="Joshua Morton">
             <div class="text-sm text-gray-500">
@@ -95,15 +102,16 @@
         </div>
 
         <div class="bg-white shadow p-4 rounded">
-            <div class="flex items-center space-x-1 text-lg">
-                <span class="text-yellow-400">★</span>
-                <span class="text-yellow-400">★</span>
-                <span class="text-yellow-400">★</span>
-                <span class="text-yellow-400">★</span>
-                <span class="text-gray-300">★</span>
-              </div>
+          <div class="flex items-center space-x-1 text-lg">
+            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">★</span>
+            <span class="text-gray-300">★</span>
+          </div>
           <h5 class="font-bold mt-2">fellow russian</h5>
-          <p class="text-sm mt-1">i enjoyed attending Mr. Rozeberg's class but I hated coding so i dropped it. you should take it if u like coding tho.</p>
+          <p class="text-sm mt-1">i enjoyed attending Mr. Rozeberg's class but I hated coding so i dropped it. you
+            should take it if u like coding tho.</p>
           <div class="mt-4 flex items-center space-x-2">
             <img src="Alysa.jpg" class="rounded-full w-8 h-8" alt="Melissa Morrison">
             <div class="text-sm text-gray-500">
@@ -114,13 +122,13 @@
         </div>
 
         <div class="bg-white shadow p-4 rounded">
-            <div class="flex items-center space-x-1 text-lg">
-                <span class="text-yellow-400">★</span>
-                <span class="text-yellow-400">★</span>
-                <span class="text-gray-300">★</span>
-                <span class="text-gray-300">★</span>
-                <span class="text-gray-300">★</span>
-              </div>
+          <div class="flex items-center space-x-1 text-lg">
+            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">★</span>
+            <span class="text-gray-300">★</span>
+            <span class="text-gray-300">★</span>
+            <span class="text-gray-300">★</span>
+          </div>
           <h5 class="font-bold mt-2">That One Guy</h5>
           <p class="text-sm mt-1">tbh I never really cared for this class it was ight but coding is ass</p>
           <div class="mt-4 flex items-center space-x-2">
@@ -153,6 +161,61 @@
         stars.forEach((s, j) => s.classList.toggle('selected', j <= i));
       });
     });
+
+    let text_block = document.getElementById("review_block");
+    let submit = document.getElementById("submit");
+
+    console.log(text_block);
+    console.log(submit);
+
+    submit.addEventListener("click", clear);
+
+    function clear() {
+      let your_text = text_block.value
+      console.log("EEE")
+      text_block.value = "";
+      stars.forEach((s, j) => s.classList.toggle('selected', j <= -1));
+
+      let stars_text = "";
+      for (let i = 0; i <= selected; i++) {
+        stars_text += `<span class="text-yellow-400">★</span>`
+      }
+
+      for (let i = 1; i < 5 - selected; i++) {
+        stars_text += `<span class="text-gray-300">★</span>`
+      }
+
+      console.log(stars_text)
+
+
+
+      let review = document.createElement("div");
+      review.className = "bg-white shadow p-4 rounded";
+      review.innerHTML = `
+    ${stars_text}
+  <h5 class="font-bold mt-2"> Your Review </h5>
+  <p class="text-sm mt-1">
+    ${your_text}
+  </p>
+  <div class="mt-4 flex items-center space-x-2">
+    <img src="randomuser.jpg" class="rounded-full w-8 h-8" alt="You">
+    <div class="text-sm text-gray-500">
+      You<br>
+      <span>April 8, 2025</span>
+    </div>
+  </div>
+`;
+
+      let gridarea = document.getElementById("reviews");
+
+      gridarea.appendChild(review);
+
+    }
+
+
+
+
   </script>
 </body>
+
 </html>
