@@ -74,7 +74,7 @@
       </div>
 
       <!-- Reviews -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+      <div id="reviews" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
         <div class="bg-white shadow p-4 rounded">
             <div class="flex items-center space-x-1 text-lg">
                 <span class="text-yellow-400">★</span>
@@ -153,6 +153,64 @@
         stars.forEach((s, j) => s.classList.toggle('selected', j <= i));
       });
     });
+<<<<<<< HEAD:carainiPage.html
+=======
+
+    let text_block = document.getElementById("review_block");
+    let submit = document.getElementById("submit");
+
+    console.log(text_block);
+    console.log(submit);
+
+    submit.addEventListener("click", clear);
+
+    function clear() {
+      let your_text = text_block.value
+      console.log("EEE")
+      text_block.value = "";
+      stars.forEach((s, j) => s.classList.toggle('selected', j <= -1));
+
+      let stars_text = "";
+      for (let i = 0; i <= selected; i++) {
+        stars_text += `<span class="text-yellow-400">★</span>`
+      }
+
+      for (let i = 1; i < 5 - selected; i++) {
+        stars_text += `<span class="text-gray-300">★</span>`
+      }
+
+
+
+      let review = document.createElement("div");
+      review.className = "bg-white shadow p-4 rounded";
+      review.innerHTML = `
+    ${stars_text}
+  <h5 class="font-bold mt-2"> Your Review </h5>
+  <p class="text-sm mt-1">
+    ${your_text}
+  </p>
+  <div class="mt-4 flex items-center space-x-2">
+    <img src="randomuser.jpg" class="rounded-full w-8 h-8" alt="You">
+    <div class="text-sm text-gray-500">
+      You<br>
+      <span>April 8, 2025</span>
+    </div>
+  </div>
+`;
+
+      let gridarea = document.getElementById("reviews");
+
+      gridarea.appendChild(review);
+
+    }
+
+
+
+
+
+
+
+>>>>>>> f81fff5 (FUCK THE MERGE):teacherPage.html
   </script>
 </body>
 </html>
