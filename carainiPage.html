@@ -49,7 +49,7 @@
         <div>
           <h2 class="text-2xl font-semibold">Sir William Mulock Secondary School</h2>
         </div>
-        <button class="bg-black text-white px-4 py-2 rounded">Submit a rating</button>
+        <button id="submit" class="bg-black text-white px-4 py-2 rounded">Submit a rating</button>
       </div>
 
       <!-- Teacher Profile -->
@@ -73,7 +73,7 @@
             <span class="star">★</span>
             <span class="star">★</span>
           </div>
-          <textarea class="w-80 h-24 p-2 border border-gray-300 rounded"
+          <textarea id="review_block" class="w-80 h-24 p-2 border border-gray-300 rounded"
             placeholder="Write your own review!"></textarea>
         </div>
       </div>
@@ -187,6 +187,8 @@
       for (let i = 1; i < 5 - selected; i++) {
         stars_text += `<span class="text-gray-300">★</span>`
       }
+
+      console.log(stars_text)
 
 
 

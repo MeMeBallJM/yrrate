@@ -68,13 +68,13 @@
             <p class="text-sm text-gray-500">Math Department</p>
           </div>
           <div class="bg-white rounded-xl border-2 border-yellow-300 p-4 text-center">
-            <img src="mrm.jpg" class="rounded mb-2" />
+            <img id="melaragno" src="mrm.jpg" class="rounded mb-2" />
             <div class="text-yellow-500 text-sm">★ 5.0</div>
             <h3 class="font-semibold">Mr. Melarango</h3>
             <p class="text-sm text-gray-500">Tech Department</p>
           </div>
           <div class="bg-white rounded-xl border-2 border-yellow-300 p-4 text-center">
-            <img src="rozenberg.jpg" class="rounded mb-2" />
+            <img id="rozenberg" src="rozenberg.jpg" class="rounded mb-2" />
             <div class="text-yellow-500 text-sm">★ 4.9</div>
             <h3 class="font-semibold">Mr. Rozenberg</h3>
             <p class="text-sm text-gray-500">Business Department</p>
@@ -129,15 +129,33 @@
   </div>
 
   <script>
-    element = document.getElementById("carianini");
+    carianini = document.getElementById("carianini");
 
-    console.log(element);
+    console.log(carianini);
 
-    element.addEventListener("click", myfunc);
+    carianini.addEventListener("click", myfunc);
 
     function myfunc() {
-      window.location.href = "http://127.0.0.1:5500/teacherPage.html";
+      window.location.href = "http://127.0.0.1:5500/carainiPage.html";
     }
+
+    melaragno = document.getElementById("melaragno");
+
+    melaragno.addEventListener("click", myfunc2);
+
+    function myfunc2() {
+      window.location.href = "http://127.0.0.1:5500/melaragnoPage.html";
+    }
+
+    rozenberg = document.getElementById("rozenberg");
+
+    rozenberg.addEventListener("click", myfunc3);
+
+    function myfunc3() {
+      window.location.href = "http://127.0.0.1:5500/rozenbergPage.html";
+    }
+
+
 
   </script>
 
